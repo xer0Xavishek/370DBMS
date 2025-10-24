@@ -55,7 +55,7 @@ This repository contains the lab project work for **CSE370 - Database Systems**.
 
 3. Start exploring the queries and procedures in the `src/` directory
 
-## 📖 Documentation
+## Documentation
 
 Detailed documentation can be found in the [`docs/`](./docs/) directory:
 - Project requirements and specifications
@@ -63,7 +63,7 @@ Detailed documentation can be found in the [`docs/`](./docs/) directory:
 - Implementation details
 - User guides and tutorials
 
-## 🔧 Usage
+## Usage
 
 ### Running SQL Scripts
 
