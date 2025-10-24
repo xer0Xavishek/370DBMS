@@ -27,6 +27,8 @@ We are committed to providing a welcoming and inclusive environment for all cont
 
 ## 🚀 Getting Started
 
+> **Note for Team Members**: If you're collaborating directly on this repository (not forking), see [COLLABORATION_GUIDE.md](./COLLABORATION_GUIDE.md) for simplified workflow instructions.
+
 ### Prerequisites
 
 1. Git installed on your local machine
@@ -34,7 +36,7 @@ We are committed to providing a welcoming and inclusive environment for all cont
 3. SQL client or IDE
 4. Basic understanding of database concepts and SQL
 
-### Setup
+### Setup for External Contributors
 
 1. Fork the repository
 2. Clone your fork:
@@ -50,6 +52,20 @@ We are committed to providing a welcoming and inclusive environment for all cont
    ```bash
    git checkout -b feature/your-feature-name
    ```
+
+### Setup for Team Members (Direct Collaborators)
+
+1. Clone the repository directly:
+   ```bash
+   git clone https://github.com/xer0Xavishek/370DBMS.git
+   cd 370DBMS
+   ```
+2. Create a new branch for your work:
+   ```bash
+   git checkout -b feature/your-feature-name
+   ```
+
+See [COLLABORATION_GUIDE.md](./COLLABORATION_GUIDE.md) for detailed team collaboration instructions.
 
 ## 💡 How to Contribute
 

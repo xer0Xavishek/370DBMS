@@ -91,12 +91,15 @@ Project reports, analysis, and documentation are available in the [`reports/`](.
 
 ## Working with Team Members
 
-**New to collaborating on this repository?** See our [COLLABORATION_GUIDE.md](./COLLABORATION_GUIDE.md) for step-by-step instructions on:
-- Setting up your environment
-- Daily workflow and Git commands
-- Handling merge conflicts
-- Best practices for teamwork
-- Quick reference guides
+**Want to collaborate on this repo?** We have comprehensive guides to help you get started:
+
+- 🚀 **[QUICK_START.md](./QUICK_START.md)** - Get up and running in 5 minutes
+- 📖 **[COLLABORATION_GUIDE.md](./COLLABORATION_GUIDE.md)** - Complete guide with detailed instructions on:
+  - Setting up your environment
+  - Daily workflow and Git commands
+  - Handling merge conflicts
+  - Best practices for teamwork
+  - Quick reference guides
 
 ## Contributing
 
