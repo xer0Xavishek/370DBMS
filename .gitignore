@@ -1,0 +1,123 @@
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+*.mdf
+*.ldf
+*.ibd
+*.frm
+*.myd
+*.myi
+
+# MySQL
+*.sql~
+*.swp
+
+# PostgreSQL
+*.backup
+
+# Oracle
+*.dmp
+*.log
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# JetBrains IDEs
+*.iml
+.idea/
+*.ipr
+*.iws
+
+# Visual Studio Code
+.vscode/
+*.code-workspace
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# OS files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.bak
+*.cache
+*.old
+
+# Logs
+*.log
+logs/
+*.log.*
+
+# Large data files (uncomment if needed)
+# *.csv
+# *.json
+# *.xml
+
+# Backup files
+*~
+*.bak
+*.backup
+*.orig
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Build artifacts
+dist/
+build/
+out/
+
+# Dependencies
+node_modules/
+vendor/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+env/
+venv/
+ENV/
+.venv
+
+# Java
+*.class
+*.jar
+*.war
+*.ear
+target/
+
+# Credentials and secrets
+*.key
+*.pem
+*.cert
+credentials.json
+secrets.yml
+config.local.*
+
+# Test outputs
+coverage/
+.nyc_output/
+htmlcov/
+.coverage
+.pytest_cache/

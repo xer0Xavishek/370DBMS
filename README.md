@@ -89,6 +89,15 @@ All visual representations including ER diagrams and schema designs are stored i
 
 Project reports, analysis, and documentation are available in the [`reports/`](./reports/) directory.
 
+## Working with Team Members
+
+**New to collaborating on this repository?** See our [COLLABORATION_GUIDE.md](./COLLABORATION_GUIDE.md) for step-by-step instructions on:
+- Setting up your environment
+- Daily workflow and Git commands
+- Handling merge conflicts
+- Best practices for teamwork
+- Quick reference guides
+
 ## Contributing
 
 We welcome contributions! Please see [CONTRIBUTING.md](./CONTRIBUTING.md) for details on:
