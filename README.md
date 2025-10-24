@@ -2,11 +2,11 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-## 📚 Project Overview
+## Project Overview
 
 This repository contains the lab project work for **CSE370 - Database Systems**. The project demonstrates the practical application of database concepts including database design, SQL queries, stored procedures, and database management principles.
 
-## 🎯 Objectives
+## Objectives
 
 - Design and implement a complete database system
 - Create Entity-Relationship (ER) diagrams and schemas
@@ -14,7 +14,7 @@ This repository contains the lab project work for **CSE370 - Database Systems**.
 - Perform database analysis and optimization
 - Document all aspects of the database project
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 370DBMS/
@@ -32,7 +32,7 @@ This repository contains the lab project work for **CSE370 - Database Systems**.
     └── sample-data/   # Sample data for testing
 ```
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -79,17 +79,17 @@ SOURCE src/queries/example_queries.sql;
 
 Test scripts and sample data are available in the `tests/` directory. Use these to validate your database implementation and query results.
 
-## 📊 Diagrams
+## Diagrams
 
 All visual representations including ER diagrams and schema designs are stored in the [`diagrams/`](./diagrams/) directory:
 - **ERD**: Entity-Relationship Diagrams showing database structure
 - **Schema**: Detailed schema diagrams with relationships and constraints
 
-## 📝 Reports
+## Reports
 
 Project reports, analysis, and documentation are available in the [`reports/`](./reports/) directory.
 
-## 🤝 Contributing
+## Contributing
 
 We welcome contributions! Please see [CONTRIBUTING.md](./CONTRIBUTING.md) for details on:
 - Code style and standards
@@ -98,26 +98,27 @@ We welcome contributions! Please see [CONTRIBUTING.md](./CONTRIBUTING.md) for de
 
 For more information about the project structure, see [PROJECT_STRUCTURE.md](./PROJECT_STRUCTURE.md).
 
-## 👥 Authors
+## Authors
 
-- **CSE370 Database Systems Lab Students**
+- **Avishek Biswas**
+- **Sreema Roy**
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-## 🙏 Acknowledgments
+##  Acknowledgments
 
 - Course Instructor and Teaching Assistants
 - CSE370 Database Systems Course Materials
 - Database design best practices and resources
 
-## 📧 Contact
+## Contact
 
 For questions or feedback, please open an issue on this repository.
 
 ---
 
 **Course**: CSE370 - Database Systems  
-**Institution**: [Your Institution Name]  
-**Academic Year**: [Year]
+**Institution**: [Brac University]  
+**Academic Year**: [Fall2025]
