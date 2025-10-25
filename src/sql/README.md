@@ -2,7 +2,7 @@
 
 This directory contains database creation and initialization scripts.
 
-## 📋 Contents
+##  Contents
 
 - **create_database.sql**: Database creation script
 - **create_tables.sql**: Table creation scripts with constraints
@@ -10,7 +10,7 @@ This directory contains database creation and initialization scripts.
 - **alter_tables.sql**: Schema modification scripts
 - **drop_scripts.sql**: Cleanup scripts (use with caution)
 
-## 📝 Script Execution Order
+##  Script Execution Order
 
 1. `create_database.sql` - Create the database
 2. `create_tables.sql` - Create all tables with constraints
@@ -18,7 +18,7 @@ This directory contains database creation and initialization scripts.
 4. `create_indexes.sql` - Create indexes for optimization (optional)
 5. `create_views.sql` - Create database views (optional)
 
-## 🎯 Guidelines
+##  Guidelines
 
 - Each script should be idempotent when possible
 - Use `IF EXISTS` checks before dropping objects
@@ -26,14 +26,13 @@ This directory contains database creation and initialization scripts.
 - Comment all major sections
 - Use proper transaction management
 
-## 📄 Template
+##  Template
 
 ```sql
 -- =============================================
 -- Script: create_tables.sql
 -- Description: Creates all database tables
--- Author: [Your Name]
--- Date: [Date]
+-- Author: Avishek
 -- Version: 1.0
 -- =============================================
 
