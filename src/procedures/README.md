@@ -2,7 +2,7 @@
 
 This directory contains stored procedures, functions, and triggers for the database.
 
-## 📋 Contents
+##  Contents
 
 ### Stored Procedures
 - Business logic implementation
@@ -22,7 +22,7 @@ This directory contains stored procedures, functions, and triggers for the datab
 - Cascading operations
 - Validation rules
 
-## 📝 Naming Conventions
+##  Naming Conventions
 
 ```sql
 -- Stored Procedures
@@ -35,7 +35,7 @@ fn_CalculateDiscount, fn_GetFullName, fn_ValidateEmail
 trg_Orders_AfterInsert, trg_Customers_BeforeUpdate
 ```
 
-## 📄 Stored Procedure Template
+##  Stored Procedure Template
 
 ```sql
 -- =============================================
@@ -87,7 +87,7 @@ END //
 DELIMITER ;
 ```
 
-## 📄 Function Template
+##  Function Template
 
 ```sql
 -- =============================================
@@ -122,7 +122,7 @@ END //
 DELIMITER ;
 ```
 
-## 📄 Trigger Template
+##  Trigger Template
 
 ```sql
 -- =============================================
@@ -155,7 +155,7 @@ END //
 DELIMITER ;
 ```
 
-## 🎯 Best Practices
+##  Best Practices
 
 - **Error Handling**: Always include error handling
 - **Transactions**: Use transactions for data consistency
@@ -165,7 +165,7 @@ DELIMITER ;
 - **Security**: Prevent SQL injection, validate permissions
 - **Performance**: Avoid cursors when possible, use set-based operations
 
-## 🔧 Usage Examples
+##  Usage Examples
 
 ```sql
 -- Call stored procedure
@@ -183,7 +183,7 @@ FROM Orders;
 SHOW TRIGGERS FROM database_name;
 ```
 
-## ✅ Testing
+##  Testing
 
 - Test with valid inputs
 - Test with invalid inputs (boundary conditions)
