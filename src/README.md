@@ -2,7 +2,7 @@
 
 This directory contains all SQL scripts and database code for the project.
 
-## 📁 Structure
+##  Structure
 
 ### `/sql` - Database Scripts
 - Database creation and initialization scripts
@@ -22,7 +22,7 @@ This directory contains all SQL scripts and database code for the project.
 - Triggers for data integrity
 - Cursors and error handling
 
-## 🎯 Coding Standards
+##  Coding Standards
 
 ### Naming Conventions
 - Tables: `PascalCase` or `snake_case` (be consistent)
@@ -58,28 +58,26 @@ ORDER BY
     total_orders DESC;
 ```
 
-## 🔧 Usage
+##  Usage
 
 ### Running Scripts
 ```bash
 # MySQL
 mysql -u username -p database_name < src/sql/create_tables.sql
 
-# PostgreSQL
-psql -U username -d database_name -f src/sql/create_tables.sql
 
 # SQL Server
 sqlcmd -S server -d database_name -i src/sql/create_tables.sql
 ```
 
-## 📝 Documentation
+##  Documentation
 
 - Add comments to explain complex queries
 - Document stored procedure parameters
 - Include example usage for procedures
 - Note performance considerations
 
-## ✅ Best Practices
+##  Best Practices
 
 - Test all scripts before committing
 - Use transactions where appropriate
