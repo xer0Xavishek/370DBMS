@@ -2,7 +2,7 @@
 
 This directory contains SQL query files for data retrieval and analysis.
 
-## 📋 Query Categories
+##  Query Categories
 
 ### Basic Queries
 - Simple SELECT statements
@@ -23,13 +23,13 @@ This directory contains SQL query files for data retrieval and analysis.
 - Window functions
 - Recursive queries
 
-## 📝 File Naming Convention
+##  File Naming Convention
 
 - Use descriptive names: `get_customer_orders.sql`
 - Group related queries: `report_sales_analysis.sql`
 - Number for execution order: `01_basic_queries.sql`
 
-## 📄 Query Template
+##  Query Template
 
 ```sql
 -- =============================================
@@ -55,7 +55,7 @@ ORDER BY
     total_amount DESC;
 ```
 
-## 🎯 Best Practices
+##  Best Practices
 
 - **Performance**: Use indexes, avoid SELECT *, limit result sets
 - **Readability**: Format queries consistently, use aliases
@@ -63,7 +63,7 @@ ORDER BY
 - **Testing**: Include expected results as comments
 - **Parameterization**: Use variables for reusable queries
 
-## 📊 Query Optimization Tips
+##  Query Optimization Tips
 
 1. Use EXPLAIN to analyze query execution plans
 2. Create appropriate indexes on frequently queried columns
@@ -71,7 +71,7 @@ ORDER BY
 4. Use JOINs instead of subqueries when possible
 5. Consider materialized views for complex, frequently-run queries
 
-## ✅ Testing Queries
+##  Testing Queries
 
 ```sql
 -- Test with small dataset first
@@ -83,7 +83,7 @@ SELECT * FROM table_name LIMIT 10;
 -- Measure execution time
 ```
 
-## 📚 Examples
+##  Examples
 
 See the query files in this directory for practical examples of:
 - Customer analysis queries
