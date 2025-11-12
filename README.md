@@ -36,8 +36,8 @@ This repository contains the lab project work for **CSE370 - Database Systems**.
 
 ### Prerequisites
 
-- Database Management System (MySQL, PostgreSQL, Oracle, etc.)
-- SQL client or IDE (MySQL Workbench, pgAdmin, DBeaver, etc.)
+- Database Management System (MySQL/MariaDB)
+- SQL client or IDE (MySQL Workbench, XAMPP)
 - Basic understanding of SQL and database concepts
 
 ### Installation
