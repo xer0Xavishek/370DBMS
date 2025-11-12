@@ -1,4 +1,4 @@
-# Project Concepts
+# Project Ideas
 
 This document outlines two innovative web application concepts: **EcoCycle** (an eco-rated product marketplace with donation/reuse features) and **SkillSwap** (a community-driven skill exchange platform).
 
