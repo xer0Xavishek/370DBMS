@@ -51,3 +51,14 @@ CREATE TABLE teacher (
     FOREIGN KEY (teacher_id) REFERENCES user(user_id)
         ON DELETE CASCADE
 );
+------------------------------------------------------
+-- 3. LEARNER (Subclass of USER)
+------------------------------------------------------
+CREATE TABLE learner (
+    learner_id INT PRIMARY KEY,
+    total_hours_learned INT DEFAULT 0,
+    learner_level VARCHAR(50),
+
+    FOREIGN KEY (learner_id) REFERENCES user(user_id)
+        ON DELETE CASCADE
+);
