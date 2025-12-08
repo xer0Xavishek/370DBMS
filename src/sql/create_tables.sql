@@ -1,10 +1,9 @@
 -- =============================================
--- Script: example_create_tables.sql
--- Description: Example table creation script
--- Author: CSE370 Team
+-- Script: create_tables.sql
+-- Description: Sript to create the database
+-- Author: CSE370 Fall-25 sec-02 Group 3
 -- Date: 2025
 -- Version: 1.0
--- Dependencies: Database must exist
 -- =============================================
 
 USE skillswap;
