@@ -2,7 +2,7 @@
 -- Script: example_create_tables.sql
 -- Description: Example table creation script
 -- Author: CSE370 Team
--- Date: 2024
+-- Date: 2025
 -- Version: 1.0
 -- Dependencies: Database must exist
 -- =============================================
