@@ -2,7 +2,7 @@
 
 Thank you for your interest in contributing to the CSE370 Database Systems Lab Project! This document provides guidelines and standards for contributing to this repository.
 
-## 📋 Table of Contents
+##  Table of Contents
 
 - [Code of Conduct](#code-of-conduct)
 - [Getting Started](#getting-started)
@@ -13,26 +13,14 @@ Thank you for your interest in contributing to the CSE370 Database Systems Lab P
 - [Documentation](#documentation)
 - [Testing](#testing)
 
-## 🤝 Code of Conduct
 
-### Our Pledge
-
-We are committed to providing a welcoming and inclusive environment for all contributors. We expect all participants to:
-
-- Use welcoming and inclusive language
-- Be respectful of differing viewpoints and experiences
-- Accept constructive criticism gracefully
-- Focus on what is best for the project
-- Show empathy towards other community members
-
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
 1. Git installed on your local machine
 2. Database management system (MySQL, PostgreSQL, etc.)
 3. SQL client or IDE
-4. Basic understanding of database concepts and SQL
 
 ### Setup
 
@@ -51,7 +39,7 @@ We are committed to providing a welcoming and inclusive environment for all cont
    git checkout -b feature/your-feature-name
    ```
 
-## 💡 How to Contribute
+##  How to Contribute
 
 ### Types of Contributions
 
@@ -72,7 +60,7 @@ We welcome the following types of contributions:
 3. Ensure your contribution aligns with the project's goals
 4. Review the project structure and coding standards
 
-## 📝 Coding Standards
+## Coding Standards
 
 ### SQL Style Guide
 
