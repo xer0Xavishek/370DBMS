@@ -77,3 +77,18 @@ CREATE TABLE skill (
     est_learning_time INT,
     is_verified BOOLEAN DEFAULT FALSE
 );
+------------------------------------------------------
+-- 5. TEACHES (M:N relationship, with attribute)
+------------------------------------------------------
+CREATE TABLE teaches (
+    teacher_id INT,
+    skill_id INT,
+    proficiency_level VARCHAR(100),
+
+    PRIMARY KEY (teacher_id, skill_id),
+
+    FOREIGN KEY (teacher_id) REFERENCES teacher(teacher_id)
+        ON DELETE CASCADE,
+    FOREIGN KEY (skill_id) REFERENCES skill(skill_id)
+        ON DELETE CASCADE
+);
