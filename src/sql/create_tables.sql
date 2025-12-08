@@ -188,3 +188,23 @@ CREATE TABLE badge (
     badge_name VARCHAR(100),
     badge_description VARCHAR(255)
 );
+------------------------------------------------------
+-- 11. USER-BADGE Relationship (EARNS)
+------------------------------------------------------
+CREATE TABLE user_badge (
+    user_id INT,
+    badge_id INT,
+
+    awarded_date DATE,
+    awarded_by INT, -- admin user id
+
+    PRIMARY KEY (user_id, badge_id),
+
+    FOREIGN KEY (user_id) REFERENCES user(user_id)
+        ON DELETE CASCADE,
+    FOREIGN KEY (badge_id) REFERENCES badge(badge_id)
+        ON DELETE CASCADE,
+
+    FOREIGN KEY (awarded_by) REFERENCES user(user_id)
+        ON DELETE SET NULL
+);
