@@ -208,3 +208,33 @@ CREATE TABLE user_badge (
     FOREIGN KEY (awarded_by) REFERENCES user(user_id)
         ON DELETE SET NULL
 );
+
+------------------------------------------------------
+-- 12. REPORT
+------------------------------------------------------
+CREATE TABLE report (
+    report_id INT AUTO_INCREMENT PRIMARY KEY,
+
+    session_teacher_id INT,
+    session_learner_id INT,
+    session_no INT,
+
+    reporter_id INT NOT NULL,
+    resolver_id INT,
+
+    description TEXT,
+    status ENUM('open','closed') DEFAULT 'open',
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+    resolution_text TEXT,
+    resolved_at DATETIME,
+
+    FOREIGN KEY (session_teacher_id, session_learner_id, session_no)
+        REFERENCES session(teacher_id, learner_id, session_no)
+        ON DELETE CASCADE,
+
+    FOREIGN KEY (reporter_id) REFERENCES user(user_id)
+        ON DELETE CASCADE,
+
+    FOREIGN KEY (resolver_id) REFERENCES user(user_id)
+        ON DELETE SET NULL
+);
