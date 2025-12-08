@@ -92,3 +92,18 @@ CREATE TABLE teaches (
     FOREIGN KEY (skill_id) REFERENCES skill(skill_id)
         ON DELETE CASCADE
 );
+------------------------------------------------------
+-- 6. LEARNS (M:N relationship with optional attribute)
+------------------------------------------------------
+CREATE TABLE learns (
+    learner_id INT,
+    skill_id INT,
+    interest_level VARCHAR(100),
+
+    PRIMARY KEY (learner_id, skill_id),
+
+    FOREIGN KEY (learner_id) REFERENCES learner(learner_id)
+        ON DELETE CASCADE,
+    FOREIGN KEY (skill_id) REFERENCES skill(skill_id)
+        ON DELETE CASCADE
+);
