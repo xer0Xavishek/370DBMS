@@ -30,3 +30,13 @@ CREATE TABLE user (
 
     skillpoints INT DEFAULT 0
 );
+------------------------------------------------------
+-- 1A. USER Multivalued Attribute (accessibility_needs)
+------------------------------------------------------
+CREATE TABLE user_accessibility_need (
+    user_id INT,
+    need VARCHAR(255),
+    PRIMARY KEY (user_id, need),
+    FOREIGN KEY (user_id) REFERENCES user(user_id)
+        ON DELETE CASCADE
+);
