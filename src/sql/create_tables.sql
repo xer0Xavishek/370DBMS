@@ -153,3 +153,38 @@ CREATE TABLE review (
         REFERENCES session(teacher_id, learner_id, session_no)
         ON DELETE CASCADE
 );
+------------------------------------------------------
+-- 9. MESSAGE (sender + receiver)
+------------------------------------------------------
+CREATE TABLE message (
+    message_id INT AUTO_INCREMENT PRIMARY KEY,
+
+    sender_id INT NOT NULL,
+    receiver_id INT NOT NULL,
+
+    content TEXT,
+    timestamp DATETIME DEFAULT CURRENT_TIMESTAMP,
+
+    session_teacher_id INT,
+    session_learner_id INT,
+    session_no INT,
+
+    FOREIGN KEY (sender_id) REFERENCES user(user_id)
+        ON DELETE CASCADE,
+
+    FOREIGN KEY (receiver_id) REFERENCES user(user_id)
+        ON DELETE CASCADE,
+
+    FOREIGN KEY (session_teacher_id, session_learner_id, session_no)
+        REFERENCES session(teacher_id, learner_id, session_no)
+        ON DELETE SET NULL
+);
+
+------------------------------------------------------
+-- 10. BADGE
+------------------------------------------------------
+CREATE TABLE badge (
+    badge_id INT AUTO_INCREMENT PRIMARY KEY,
+    badge_name VARCHAR(100),
+    badge_description VARCHAR(255)
+);
