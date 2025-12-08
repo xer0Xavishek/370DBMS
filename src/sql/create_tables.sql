@@ -62,3 +62,18 @@ CREATE TABLE learner (
     FOREIGN KEY (learner_id) REFERENCES user(user_id)
         ON DELETE CASCADE
 );
+------------------------------------------------------
+-- 4. SKILL
+------------------------------------------------------
+CREATE TABLE skill (
+    skill_id INT AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(100) NOT NULL,
+    category VARCHAR(60),
+
+    -- composite attribute difficulty(level,notes)
+    difficulty_level VARCHAR(50),
+    difficulty_notes VARCHAR(255),
+
+    est_learning_time INT,
+    is_verified BOOLEAN DEFAULT FALSE
+);
