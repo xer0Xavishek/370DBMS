@@ -107,3 +107,30 @@ CREATE TABLE learns (
     FOREIGN KEY (skill_id) REFERENCES skill(skill_id)
         ON DELETE CASCADE
 );
+
+------------------------------------------------------
+-- 7. SESSION (Weak Entity)
+-- Identified by (teacher_id, learner_id, session_no)
+------------------------------------------------------
+CREATE TABLE session (
+    teacher_id INT,
+    learner_id INT,
+    session_no INT,
+    
+    status ENUM('pending','accepted','completed') DEFAULT 'pending',
+    scheduled_time DATETIME,
+    duration_hours INT,
+    skillpoints_transferred INT,
+
+    skill_id INT, -- involved_in relationship
+
+    PRIMARY KEY (teacher_id, learner_id, session_no),
+
+    FOREIGN KEY (teacher_id) REFERENCES teacher(teacher_id)
+        ON DELETE CASCADE,
+    FOREIGN KEY (learner_id) REFERENCES learner(learner_id)
+        ON DELETE CASCADE,
+
+    FOREIGN KEY (skill_id) REFERENCES skill(skill_id)
+        ON DELETE SET NULL
+);
