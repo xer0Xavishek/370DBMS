@@ -40,3 +40,14 @@ CREATE TABLE user_accessibility_need (
     FOREIGN KEY (user_id) REFERENCES user(user_id)
         ON DELETE CASCADE
 );
+------------------------------------------------------
+-- 2. TEACHER (Subclass of USER)
+------------------------------------------------------
+CREATE TABLE teacher (
+    teacher_id INT PRIMARY KEY,
+    total_hours_taught INT DEFAULT 0,
+    average_rating DECIMAL(3,2),
+
+    FOREIGN KEY (teacher_id) REFERENCES user(user_id)
+        ON DELETE CASCADE
+);
