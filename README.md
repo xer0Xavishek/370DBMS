@@ -37,8 +37,7 @@ This repository contains the lab project work for **CSE370 - Database Systems**.
 ### Prerequisites
 
 - Database Management System (MySQL/MariaDB)
-- SQL client or IDE (MySQL Workbench, XAMPP)
-- Basic understanding of SQL and database concepts
+- SQL client or IDE (XAMPP)
 
 ### Installation
 
@@ -53,14 +52,12 @@ This repository contains the lab project work for **CSE370 - Database Systems**.
    - Run the SQL scripts from the `src/sql/` directory
    - Load sample data from `tests/sample-data/` (optional)
 
-3. Start exploring the queries and procedures in the `src/` directory
 
 ## Documentation
 
 Detailed documentation can be found in the [`docs/`](./docs/) directory:
 - Project requirements and specifications
 - Database design documentation
-- Implementation details
 - User guides and tutorials
 
 ## Usage
@@ -100,8 +97,8 @@ For more information about the project structure, see [PROJECT_STRUCTURE.md](./P
 
 ## Authors
 
-- **Avishek Biswas**
-- **Sreema Roy**
+- **Avishek Biswas ID: 23201427 CSE@bracU**
+- **Sreema Roy ID: 23201444 CSE@bracU**
 
 ## License
 
@@ -109,9 +106,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ##  Acknowledgments
 
-- Course Instructor and Teaching Assistants
-- CSE370 Database Systems Course Materials
-- Database design best practices and resources
+- Course Instructor (Theory + Laboratory)
 
 ## Contact
 
@@ -119,6 +114,6 @@ For questions or feedback, please open an issue on this repository.
 
 ---
 
-**Course**: CSE370 - Database Systems  
+**Course**: CSE370 - Database Systems Sec-02 NNC(theory) Sec-02 Lab(RBR + MLDH)  
 **Institution**: [Brac University]  
 **Academic Year**: [Fall2025]
