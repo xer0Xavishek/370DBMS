@@ -134,3 +134,22 @@ CREATE TABLE session (
     FOREIGN KEY (skill_id) REFERENCES skill(skill_id)
         ON DELETE SET NULL
 );
+------------------------------------------------------
+-- 8. REVIEW (Weak entity of SESSION)
+------------------------------------------------------
+CREATE TABLE review (
+    teacher_id INT,
+    learner_id INT,
+    session_no INT,
+    review_no INT,
+
+    rating INT CHECK (rating BETWEEN 1 AND 5),
+    comment TEXT,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+
+    PRIMARY KEY (teacher_id, learner_id, session_no, review_no),
+
+    FOREIGN KEY (teacher_id, learner_id, session_no)
+        REFERENCES session(teacher_id, learner_id, session_no)
+        ON DELETE CASCADE
+);
