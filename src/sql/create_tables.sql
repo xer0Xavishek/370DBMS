@@ -7,5 +7,5 @@
 -- Dependencies: Database must exist
 -- =============================================
 
-USE cse370_dbms;
+USE skillswap;
 
