@@ -141,7 +141,7 @@ CREATE TABLE review (
     teacher_id INT,
     learner_id INT,
     session_no INT,
-    review_no INT,
+    review_id INT AUTO_INCREMENT PRIMARY KEY,
 
     rating INT CHECK (rating BETWEEN 1 AND 5),
     comment TEXT,
