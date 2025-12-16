@@ -6,12 +6,12 @@ $user_id = $_SESSION['user_id'];
 $user_name = $_SESSION['name'];
 $role = $_SESSION['role'];
 
-// Fetch User Data
+// take User Data
 $user = $conn->query("SELECT * FROM user WHERE user_id = $user_id")->fetch_assoc();
 $teacher = $conn->query("SELECT * FROM teacher WHERE teacher_id = $user_id")->fetch_assoc();
 $learner = $conn->query("SELECT * FROM learner WHERE learner_id = $user_id")->fetch_assoc();
 
-// Fetch Active Sessions (As Learner)
+// take Active Sessions (As Learner)
 // Need to join user (teacher info) and skill
 $learning_sessions = $conn->query("
     SELECT s.*, u.first_name as teacher_name, sk.title as skill_title 
@@ -22,7 +22,7 @@ $learning_sessions = $conn->query("
     ORDER BY s.scheduled_time DESC
 ");
 
-// Fetch Active Sessions (As Teacher)
+// take Active Sessions (As Teacher)
 $teaching_sessions = $conn->query("
     SELECT s.*, u.first_name as learner_name, sk.title as skill_title 
     FROM session s 
