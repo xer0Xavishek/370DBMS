@@ -32,6 +32,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $stmt->bind_param("iiiisi", $teacher_id, $learner_id, $next_session_no, $skill_id, $scheduled_time, $duration);
     
     if ($stmt->execute()) {
+        // --- Notification: Send Message to Teacher ---
+        $msg_content = " New Request: I would like to learn **" . $info['title'] . "** on " . $scheduled_time;
+        // Insert into message table
+        // Note: session_teacher_id/no are optional but good for linking 
+        $msg_stmt = $conn->prepare("INSERT INTO message (sender_id, receiver_id, content, timestamp, session_teacher_id, session_learner_id, session_no) VALUES (?, ?, ?, NOW(), ?, ?, ?)");
+        $msg_stmt->bind_param("iisiii", $learner_id, $teacher_id, $msg_content, $teacher_id, $learner_id, $next_session_no);
+        $msg_stmt->execute();
+        
         header("Location: dashboard.php?msg=RequestSent");
         exit();
     } else {
