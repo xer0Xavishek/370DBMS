@@ -50,6 +50,16 @@ if ($action == 'accept' && $session['teacher_id'] == $user_id) {
     // 3. Update Stats
     $conn->query("UPDATE teacher SET total_hours_taught = total_hours_taught + " . $session['duration_hours'] . " WHERE teacher_id = " . $session['teacher_id']);
     $conn->query("UPDATE learner SET total_hours_learned = total_hours_learned + " . $session['duration_hours'] . " WHERE learner_id = " . $session['learner_id']);
+
+    // 4. Auto-Award Badges (Logic)
+    // Check Teacher Hours
+    $res = $conn->query("SELECT total_hours_taught FROM teacher WHERE teacher_id = " . $session['teacher_id']);
+    $hours = $res->fetch_assoc()['total_hours_taught'];
+    
+    if($hours >= 50) {
+        // Award 'Master Mentor' (Badge ID 1)
+        $conn->query("INSERT IGNORE INTO user_badge (user_id, badge_id, awarded_date, awarded_by) VALUES (" . $session['teacher_id'] . ", 1, NOW(), 1)");
+    }
 }
 
 header("Location: dashboard.php");

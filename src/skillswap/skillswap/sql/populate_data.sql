@@ -185,8 +185,19 @@ SELECT teacher_id, session_no, learner_id, 'Bulk Generated Report: Issue with co
 FROM `session` 
 LIMIT 5;
 
-INSERT INTO `badge` VALUES (1, 'Super', 'Desc'), (2, 'Learner', 'Desc');
+INSERT INTO `badge` (`badge_id`, `badge_name`, `badge_description`) VALUES
+(1, '🎓 Master Mentor', 'Taught over 50 hours with excellence.'),
+(2, '🚀 Fast Learner', 'Completed 10 sessions in a month.'),
+(3, '⭐ 5-Star General', 'Maintained a perfect 5.0 rating.'),
+(4, '🤝 Super Swapper', 'Balanced giving and taking equally.'),
+(5, '🏙️ Local Hero', 'Most active swapper in their city.'),
+(6, '🔥 Trending Teach', 'Teaches the most popular skill in town.');
+
 INSERT IGNORE INTO `user_badge` (`user_id`, `badge_id`, `awarded_date`, `awarded_by`)
 SELECT user_id, 1, NOW(), 1 FROM `user` WHERE skillpoints > 100;
+INSERT IGNORE INTO `user_badge` (`user_id`, `badge_id`, `awarded_date`, `awarded_by`) VALUES
+(2, 3, NOW(), 1),
+(3, 2, NOW(), 1),
+(4, 5, NOW(), 1);
 
 SET FOREIGN_KEY_CHECKS = 1;
