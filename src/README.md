@@ -2,6 +2,14 @@
 
 This directory contains all SQL scripts and database code for the project.
 
+1. Create database in xampp shell
+2. move skillswap folder to htdocs
+3. go to http://localhost/phpmyadmin/
+4. import skilswap.sql
+5. http://localhost/skillswap/
+
+
+
 ##  Structure
 
 ### `/sql` - Database Scripts
