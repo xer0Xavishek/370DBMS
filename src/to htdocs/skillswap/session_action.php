@@ -61,21 +61,8 @@ if ($action == 'accept' && $session['teacher_id'] == $user_id) {
         $conn->query("INSERT IGNORE INTO user_badge (user_id, badge_id, awarded_date, awarded_by) VALUES (" . $session['teacher_id'] . ", 1, NOW(), 1)");
     }
     
-    // --- Notification: Send Message to Learner (Completed) ---
-    $msg_content = "🤖 Session Completed! I have marked our session as finished. " . $points . " SkillPoints transferred.";
-    $m_stmt = $conn->prepare("INSERT INTO message (sender_id, receiver_id, content, timestamp, session_teacher_id, session_learner_id, session_no) VALUES (?, ?, ?, NOW(), ?, ?, ?)");
-    $m_stmt->bind_param("iisiii", $session['teacher_id'], $session['learner_id'], $msg_content, $session['teacher_id'], $session['learner_id'], $session['session_no']);
-    $m_stmt->execute();
 }
-// --- Handle Accept Notification (Placed here to avoid deeply nested else-ifs logic issues in replace) ---
-if ($action == 'accept' && $session['teacher_id'] == $user_id) {
-    // Note: The UPDATE happened above in lines 28-29 (not shown in this chunk but exists in file)
-    // We just insert the message here.
-     $msg_content = "🤖 Request Accepted! I have accepted your session request. See you then!";
-     $m_stmt = $conn->prepare("INSERT INTO message (sender_id, receiver_id, content, timestamp, session_teacher_id, session_learner_id, session_no) VALUES (?, ?, ?, NOW(), ?, ?, ?)");
-     $m_stmt->bind_param("iisiii", $session['teacher_id'], $session['learner_id'], $msg_content, $session['teacher_id'], $session['learner_id'], $session['session_no']);
-     $m_stmt->execute();
-}
+
 
 header("Location: dashboard.php");
 ?>
