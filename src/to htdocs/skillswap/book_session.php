@@ -1,41 +1,40 @@
 <?php
 session_start();
-include 'includes/auth_check.php';
-include 'includes/db.php';
+include 'includes/auth_check.php'; //  user is logged in???
+include 'includes/db.php';// db connection file
 
-if (!isset($_GET['teacher_id']) || !isset($_GET['skill_id'])) {
-    header("Location: skills.php");
+if (!isset($_GET['teacher_id']) || !isset($_GET['skill_id'])) {  //url params check 
+    header("Location: skills.php"); //go back to skills page if t id and s id isnull
     exit();
 }
 
 $teacher_id = intval($_GET['teacher_id']);
 $skill_id = intval($_GET['skill_id']);
-$learner_id = $_SESSION['user_id'];
+$learner_id = $_SESSION['user_id']; //current logged in user is learner
 
 // Get details
 $sql = "SELECT u.first_name, u.last_name, s.title, s.est_learning_time 
         FROM user u, skill s 
-        WHERE u.user_id = $teacher_id AND s.skill_id = $skill_id";
-$info = $conn->query($sql)->fetch_assoc();
+        WHERE u.user_id = $teacher_id AND s.skill_id = $skill_id"; //join user and skill table to get teacher name and skill title
+$info = $conn->query($sql)->fetch_assoc(); //fetch the query result as associative array(string keys) 
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $scheduled_time = $_POST['scheduled_time'];
+    $scheduled_time = $_POST['scheduled_time']; //from form input
     $duration = intval($_POST['duration']);
     
     // GENERATE SESSION_NO MANUALLY (Composite Key Logic)
     // Find the current max session_no for this teacher
     $max_query = $conn->query("SELECT MAX(session_no) as max_no FROM session WHERE teacher_id = $teacher_id");
     $row = $max_query->fetch_assoc();
-    $next_session_no = ($row['max_no'] ?? 0) + 1;
+    $next_session_no = ($row['max_no'] ?? 0) + 1; //increment session no by 1
     
     $stmt = $conn->prepare("INSERT INTO session (teacher_id, learner_id, session_no, skill_id, scheduled_time, duration_hours, status) VALUES (?, ?, ?, ?, ?, ?, 'pending')");
     $stmt->bind_param("iiiisi", $teacher_id, $learner_id, $next_session_no, $skill_id, $scheduled_time, $duration);
     
     if ($stmt->execute()) {
-        // --- Notification: Send Message to Teacher ---
+        // Send Message to Teacher 
         $msg_content = " New Request: I would like to learn **" . $info['title'] . "** on " . $scheduled_time;
-        // Insert into message table
-        // Note: session_teacher_id/no are optional but good for linking 
+        // ins into message table
         $msg_stmt = $conn->prepare("INSERT INTO message (sender_id, receiver_id, content, timestamp, session_teacher_id, session_learner_id, session_no) VALUES (?, ?, ?, NOW(), ?, ?, ?)");
         $msg_stmt->bind_param("iisiii", $learner_id, $teacher_id, $msg_content, $teacher_id, $learner_id, $next_session_no);
         $msg_stmt->execute();

@@ -106,9 +106,7 @@ $badges = $conn->query("SELECT b.* FROM user_badge ub JOIN badge b ON ub.badge_i
                 <!-- Avatar Display -->
                 <?php 
                     $pic_path = "assets/uploads/profile_pics/" . ($user['profile_picture'] ? $user['profile_picture'] : 'default.png');
-                    if (!file_exists($pic_path)) { $pic_path = "assets/images/default_avatar.png"; } // Fallback
-                    // Or actually, let's just use a simple check. If database says 'default.png', we assume it's a placeholder.
-                    // Ideally we should have a real default image. I'll just use a style fallback if file missing.
+                    if (!file_exists($pic_path)) { $pic_path = "assets/images/default_avatar.png"; } 
                 ?>
                 <div style="width: 150px; height: 150px; margin: 0 auto 15px; border-radius: 50%; overflow: hidden; border: 3px solid var(--primary);">
                     <?php if($user['profile_picture'] && $user['profile_picture'] != 'default.png'): ?>

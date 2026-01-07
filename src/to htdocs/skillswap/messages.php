@@ -10,16 +10,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && !empty($_POST['content'])) {
     $content = $conn->real_escape_string($_POST['content']);
     $rec_id = intval($_POST['receiver_id']);
     
-    // If no specific receiver, broadcast to global chat (receiver_id = 0 or admin? Let's use 1 as system or create global logic)
-    // Actually, schema requires valid receiver_id.
-    // Let's implement simple "Chat with User X" logic.
+    
     if ($rec_id > 0) {
          $conn->query("INSERT INTO message (sender_id, receiver_id, content) VALUES ($user_id, $rec_id, '$content')");
     }
 }
 
-// Fetch Conversations (Users I have chatted with or matched with)
-// This query gets unique users based on session history + existing messages
+
 $contacts = $conn->query("
     SELECT DISTINCT u.user_id, u.first_name, u.last_name 
     FROM user u
@@ -43,7 +40,7 @@ if ($receiver_id > 0) {
         SELECT * FROM message 
         WHERE (sender_id = $user_id AND receiver_id = $receiver_id) 
            OR (sender_id = $receiver_id AND receiver_id = $user_id)
-        ORDER BY timestamp ASC
+        ORDER BY timestamp DESC
     ");
     
     $partner = $conn->query("SELECT first_name, last_name FROM user WHERE user_id = $receiver_id")->fetch_assoc();

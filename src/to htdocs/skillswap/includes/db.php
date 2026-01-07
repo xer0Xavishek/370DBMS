@@ -1,7 +1,7 @@
 <?php
 $host = 'localhost';
 $user = 'root';
-$pass = ''; // Default XAMPP password
+$pass = ''; 
 $db   = 'skillswap';
 
 $conn = new mysqli($host, $user, $pass, $db);

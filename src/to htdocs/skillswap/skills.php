@@ -18,7 +18,6 @@ if (isset($_SESSION['user_id'])) {
     }
 }
 
-// Fetch skills being taught
 // Join teaches -> user (teacher details) -> skill (skill details)
 // Order By: Same City First, then Title
 $sql = "SELECT t.*, u.first_name, u.last_name, u.city, s.title, s.category, s.difficulty_level, s.est_learning_time,
